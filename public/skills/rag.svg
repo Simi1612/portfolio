@@ -1,0 +1,12 @@
+<svg viewBox="0 0 110 110" width="110" height="110" xmlns="http://www.w3.org/2000/svg">
+  <rect width="110" height="110" rx="15" fill="#064E3B" stroke="#34D399" stroke-width="2"/>
+  <!-- Document -->
+  <rect x="35" y="25" width="30" height="40" rx="3" fill="none" stroke="#D1FAE5" stroke-width="3"/>
+  <line x1="42" y1="35" x2="58" y2="35" stroke="#D1FAE5" stroke-width="2"/>
+  <line x1="42" y1="45" x2="58" y2="45" stroke="#D1FAE5" stroke-width="2"/>
+  <line x1="42" y1="55" x2="50" y2="55" stroke="#D1FAE5" stroke-width="2"/>
+  <!-- Magnifying glass -->
+  <circle cx="68" cy="68" r="12" fill="none" stroke="#34D399" stroke-width="3"/>
+  <line x1="77" y1="77" x2="88" y2="88" stroke="#34D399" stroke-width="3"/>
+  <text x="55" y="96" font-family="sans-serif" font-weight="bold" font-size="16" fill="#D1FAE5" text-anchor="middle">RAG</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg viewBox="0 0 110 110" width="110" height="110" xmlns="http://www.w3.org/2000/svg">
+  <rect width="110" height="110" rx="15" fill="#581C87" stroke="#A855F7" stroke-width="2"/>
+  <!-- Sparkles -->
+  <path d="M55 20 L58 40 L78 43 L58 46 L55 66 L52 46 L32 43 L52 40 Z" fill="#F3E8FF"/>
+  <path d="M80 60 L81.5 70 L91.5 71.5 L81.5 73 L80 83 L78.5 73 L68.5 71.5 L78.5 70 Z" fill="#E9D5FF"/>
+  <path d="M30 65 L31 72 L38 73 L31 74 L30 81 L29 74 L22 73 L29 72 Z" fill="#E9D5FF"/>
+  <text x="55" y="93" font-family="sans-serif" font-weight="bold" font-size="16" fill="#F3E8FF" text-anchor="middle">GenAI</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg viewBox="0 0 110 110" width="110" height="110" xmlns="http://www.w3.org/2000/svg">
+  <rect width="110" height="110" rx="15" fill="#F05032" stroke="#FFF" stroke-width="1"/>
+  <!-- Git diamond -->
+  <g transform="translate(55,55) rotate(45)">
+    <rect x="-25" y="-25" width="50" height="50" rx="6" fill="#FFF"/>
+    <!-- Git nodes -->
+    <line x1="-12" y1="-12" x2="12" y2="-12" stroke="#F05032" stroke-width="5" transform="rotate(-45)"/>
+    <line x1="-12" y1="12" x2="-12" y2="-12" stroke="#F05032" stroke-width="5" transform="rotate(-45)"/>
+    <circle cx="0" cy="-15" r="6" fill="#F05032" transform="rotate(-45)"/>
+    <circle cx="-15" cy="5" r="6" fill="#F05032" transform="rotate(-45)"/>
+    <circle cx="15" cy="5" r="6" fill="#F05032" transform="rotate(-45)"/>
+  </g>
+</svg>
