@@ -30,4 +30,20 @@ export const siteConfig: Metadata = {
     name: "Katariya Smruti Laxmanbhai",
     url: "https://github.com/Simi1612",
   },
+  verification: {
+    google: "YOUR_GOOGLE_VERIFICATION_CODE", // Replace this with the verification code from Google Search Console
+  },
+  openGraph: {
+    title: "Katariya Smruti | AI Developer Portfolio",
+    description: "Welcome to my space-themed AI Developer portfolio showcasing intelligent automation, LLM-powered applications, and civil engineering document analysis systems.",
+    url: "https://www.smrutikatariya.dev", // Replace with your live domain name
+    siteName: "Katariya Smruti Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Katariya Smruti | AI Developer Portfolio",
+    description: "Welcome to my space-themed AI Developer portfolio showcasing intelligent automation, LLM-powered applications, and civil engineering document analysis systems.",
+  },
 } as const;
