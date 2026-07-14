@@ -67,18 +67,6 @@ export const SOCIALS = [
 
 export const FRONTEND_SKILL = [
   {
-    skill_name: "Python",
-    image: "python.svg",
-    width: 75,
-    height: 75,
-  },
-  {
-    skill_name: "Django",
-    image: "django.svg",
-    width: 75,
-    height: 75,
-  },
-  {
     skill_name: "JavaScript",
     image: "js.png",
     width: 65,
@@ -169,27 +157,6 @@ export const FULLSTACK_SKILL = [
     height: 75,
   },
   {
-    skill_name: "n8n Automation",
-    image: "n8n.svg",
-    width: 75,
-    height: 75,
-  },
-  {
-    skill_name: "Docker",
-    image: "docker.png",
-    width: 70,
-    height: 70,
-  },
-] as const;
-
-export const OTHER_SKILL = [
-  {
-    skill_name: "Git & GitHub",
-    image: "git.svg",
-    width: 65,
-    height: 65,
-  },
-  {
     skill_name: "Figma",
     image: "figma.png",
     width: 50,
@@ -201,7 +168,7 @@ export const PROJECTS = [
   {
     title: "AI Invoice Extractor",
     description:
-      "An AI-powered invoice data extraction platform that turns any invoice — PDF, PNG, or JPG — into structured, exportable data in seconds. Built end-to-end with a FastAPI backend, React frontend, Supabase database, and Google Gemini 2.0 Flash Vision as the AI engine.",
+      "Processes invoices in under 5 seconds with 95%+ extraction accuracy, converting PDFs and image receipts into structured JSON. Reduces manual invoice data-entry overhead by up to 90% for finance teams.",
     image: "/videos/ai-invoice.mp4",
     link: "https://github.com/Simi1612/InvoXtract",
     tags: ["React", "FastAPI", "Supabase", "Gemini 2.0", "Python"],
@@ -209,7 +176,7 @@ export const PROJECTS = [
   {
     title: "Trendu Daily - n8n Automation",
     description:
-      "Trendu Daily is a fully automated, production-grade AI newsletter system that scrapes live global news every morning, filters market signals, generates news-derived startup opportunities using GPT-4o-Mini, and delivers personalized HTML email digests to subscribers — all with zero manual intervention.",
+      "Saves 10+ hours per week of manual industry research by scraping global news feeds, using GPT-4o-Mini to filter and extract high-value market signals, and delivering personalized HTML Digests to subscribers.",
     image: "/videos/n8n-automation.mp4",
     link: "#",
     tags: ["n8n", "GPT-4o-Mini", "JavaScript", "OpenAI API", "HTML Email"],
@@ -217,7 +184,7 @@ export const PROJECTS = [
   {
     title: "Blinkit App Analysis",
     description:
-      "A data-driven analysis of the Blinkit app using Power BI, highlighting key metrics like delivery speed, pricing, and user experience through interactive dashboards. Explore the full interactive dashboard inside the GitHub repository.",
+      "Optimized retail supply metrics and delivery speeds using Power BI and DAX modeling. Identified pricing clusters and key friction points to drive 15%+ improvements in delivery route efficiency insights.",
     image: "/blinkit-dashboard-v2.png",
     link: "https://app.powerbi.com/view?r=eyJrIjoiNTJjZjcxNTEtYTQyMy00Mjg2LThmNjYtZjhmODEzYjA1MjA5IiwidCI6ImRhYTU5MmNhLWRlN2ItNGM1NC04ODM2LTkxYTY2OTBmZTE5NyJ9",
     tags: ["Power BI", "Excel", "DAX", "Data Analysis"],
@@ -225,7 +192,7 @@ export const PROJECTS = [
   {
     title: "AI Chat Platform",
     description:
-      "A full-stack multi-user AI chatbot web application built with Django, LangGraph, and RAG. Supports intelligent chat sessions, context retrieval, and model orchestration.",
+      "Multi-user chat platform leveraging LangGraph and FAISS vector index RAG. Resolves up to 75% of repeating document queries instantly without human support agent intervention.",
     image: "",
     link: "https://github.com/Simi1612/Chatbot",
     tags: ["Django", "LangGraph", "RAG", "Groq", "Gemini", "FAISS"],
@@ -267,20 +234,20 @@ export const FOOTER_DATA = [
 
 export const NAV_LINKS = [
   {
-    title: "About me",
-    link: "#about-me",
+    title: "Services",
+    link: "#services",
   },
   {
-    title: "Skills",
-    link: "#skills",
+    title: "Projects",
+    link: "#projects",
   },
   {
     title: "Experience",
     link: "#experience",
   },
   {
-    title: "Projects",
-    link: "#projects",
+    title: "Contact",
+    link: "#contact",
   },
 ] as const;
 

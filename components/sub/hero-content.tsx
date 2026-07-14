@@ -20,24 +20,22 @@ export const HeroContent = () => {
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div
           variants={slideInFromTop}
-          className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]]"
+          className="flex items-center gap-2 py-1.5 px-3.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 text-xs font-semibold backdrop-blur-sm self-start select-none"
         >
-          <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
-          <h1 className="Welcome-text text-[13px]">
-            AI Developer Portfolio
-          </h1>
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span>Available for Freelance Projects</span>
         </motion.div>
 
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
+          className="flex flex-col gap-6 mt-6 text-5xl md:text-6xl font-bold text-white max-w-[650px] w-auto h-auto leading-tight"
         >
           <span>
             Building{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-              intelligent AI
+              AI Agents &
             </span>{" "}
-            solutions.
+            Intelligent Automation for Businesses.
           </span>
         </motion.div>
 
@@ -45,7 +43,7 @@ export const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[600px]"
         >
-          I build AI-powered applications, intelligent automation workflows, and business solutions using Python, Django, Generative AI, LangChain, LangGraph, Machine Learning, and n8n.
+          I help startups and businesses automate workflows, process documents with AI, and build production-ready LLM applications using Python, FastAPI, n8n, and modern web technologies.
         </motion.p>
 
         <div className="flex flex-row gap-4 flex-wrap z-20">
@@ -54,16 +52,14 @@ export const HeroContent = () => {
             variants={slideInFromLeft(1)}
             className="py-2.5 px-6 button-primary text-center text-white cursor-pointer rounded-lg font-medium transition-all hover:scale-105 active:scale-95 select-none"
           >
-            Explore Projects
+            View My Work
           </motion.a>
           
           <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noreferrer noopener"
+            href="#contact"
             className="py-2.5 px-6 border border-[#7042f88b] bg-[#03001457] text-center text-[#b49bff] hover:text-white hover:bg-purple-600/30 cursor-pointer rounded-lg font-medium transition-all hover:scale-105 active:scale-95 backdrop-blur-sm z-20 select-none"
           >
-            View Resume
+            Start Your Project
           </a>
         </div>
       </div>

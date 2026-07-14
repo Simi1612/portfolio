@@ -142,6 +142,8 @@ export const ProjectCard = ({
                 src={src}
                 controls
                 autoPlay
+                preload="none"
+                playsInline
                 className="w-full h-full"
               />
             </div>

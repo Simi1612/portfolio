@@ -45,17 +45,25 @@ export const Navbar = () => {
         </div>
 
         {/* Social Icons (Web) */}
-        <div className="hidden md:flex flex-row gap-5">
-          {SOCIALS.map(({ link, name, icon: Icon }) => (
-            <Link
-              href={link}
-              target="_blank"
-              rel="noreferrer noopener"
-              key={name}
-            >
-              <Icon className="h-6 w-6 text-white" />
-            </Link>
-          ))}
+        <div className="hidden md:flex flex-row items-center gap-5">
+          <div className="flex flex-row gap-5 mr-1">
+            {SOCIALS.map(({ link, name, icon: Icon }) => (
+              <Link
+                href={link}
+                target="_blank"
+                rel="noreferrer noopener"
+                key={name}
+              >
+                <Icon className="h-6 w-6 text-white" />
+              </Link>
+            ))}
+          </div>
+          <Link
+            href="#contact"
+            className="py-1.5 px-4 text-sm font-semibold border border-[#7042f88b] bg-[#03001457] text-[#b49bff] hover:text-white hover:bg-purple-600/30 rounded-full transition-all hover:scale-105 active:scale-95 select-none cursor-pointer z-50"
+          >
+            Hire Me
+          </Link>
         </div>
 
         {/* Hamburger Menu */}
@@ -82,6 +90,13 @@ export const Navbar = () => {
                 {link.title}
               </Link>
             ))}
+            <Link
+              href="#contact"
+              className="py-2 px-6 text-sm font-semibold border border-[#7042f88b] bg-[#03001457] text-[#b49bff] hover:text-white hover:bg-purple-600/30 rounded-full transition-all mt-2 select-none cursor-pointer"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Hire Me
+            </Link>
           </div>
 
           {/* Social Icons */}
