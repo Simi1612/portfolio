@@ -5,6 +5,11 @@ import Link from "next/link";
 
 import { LINKS, NAV_LINKS, SOCIALS } from "@/constants";
 
+const scrollTo = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+};
+
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -14,7 +19,7 @@ export const Navbar = () => {
       <div className="w-full h-full flex items-center justify-between m-auto px-[10px]">
         {/* Logo + Name */}
         <Link
-          href="#about-me"
+          href="#hero"
           className="flex items-center"
         >
           <Image
@@ -29,18 +34,17 @@ export const Navbar = () => {
         </Link>
 
         {/* Web Navbar */}
-        <div className="hidden md:flex w-[400px] h-full flex-row items-center justify-between md:mr-20">
-          <div className="flex items-center justify-between w-full h-auto border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.37)] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
+        <div className="hidden md:flex w-[580px] h-full flex-row items-center justify-between md:mr-20">
+          <div className="flex items-center justify-between w-full h-auto border border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.37)] mr-[15px] px-[24px] py-[10px] rounded-full text-gray-200 gap-6">
             {NAV_LINKS.map((link) => (
-              <Link
+              <button
                 key={link.title}
-                href={link.link}
-                className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
+                onClick={() => scrollTo(link.link.replace("#", ""))}
+                className="cursor-pointer hover:text-[rgb(112,66,248)] transition whitespace-nowrap text-sm"
               >
                 {link.title}
-              </Link>
+              </button>
             ))}
-
           </div>
         </div>
 
@@ -81,14 +85,16 @@ export const Navbar = () => {
           {/* Links */}
           <div className="flex flex-col items-center gap-4">
             {NAV_LINKS.map((link) => (
-              <Link
+              <button
                 key={link.title}
-                href={link.link}
-                className="cursor-pointer hover:text-[rgb(112,66,248)] transition text-center"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => {
+                  scrollTo(link.link.replace("#", ""));
+                  setIsMobileMenuOpen(false);
+                }}
+                className="cursor-pointer hover:text-[rgb(112,66,248)] transition text-center text-sm"
               >
                 {link.title}
-              </Link>
+              </button>
             ))}
             <Link
               href="#contact"

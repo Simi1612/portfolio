@@ -16,8 +16,20 @@ export const SKILL_DATA = [
     height: 75,
   },
   {
+    skill_name: "C++",
+    image: "https://skillicons.dev/icons?i=cpp",
+    width: 75,
+    height: 75,
+  },
+  {
     skill_name: "Django",
     image: "django.svg",
+    width: 75,
+    height: 75,
+  },
+  {
+    skill_name: "FastAPI",
+    image: "https://skillicons.dev/icons?i=fastapi",
     width: 75,
     height: 75,
   },
@@ -29,7 +41,7 @@ export const SKILL_DATA = [
   },
   {
     skill_name: "n8n Automation",
-    image: "n8n.svg",
+    image: "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/n8n.svg",
     width: 75,
     height: 75,
   },
@@ -67,14 +79,26 @@ export const SOCIALS = [
 
 export const FRONTEND_SKILL = [
   {
+    skill_name: "HTML",
+    image: "html.png",
+    width: 65,
+    height: 65,
+  },
+  {
+    skill_name: "CSS",
+    image: "css.png",
+    width: 65,
+    height: 65,
+  },
+  {
     skill_name: "JavaScript",
     image: "js.png",
     width: 65,
     height: 65,
   },
   {
-    skill_name: "Tailwind CSS",
-    image: "tailwind.png",
+    skill_name: "TypeScript",
+    image: "ts.png",
     width: 75,
     height: 75,
   },
@@ -85,14 +109,20 @@ export const FRONTEND_SKILL = [
     height: 75,
   },
   {
-    skill_name: "TypeScript",
-    image: "ts.png",
+    skill_name: "Tailwind CSS",
+    image: "tailwind.png",
     width: 75,
     height: 75,
   },
   {
-    skill_name: "Next.js 14",
+    skill_name: "Next.js",
     image: "next.png",
+    width: 75,
+    height: 75,
+  },
+  {
+    skill_name: "Node.js",
+    image: "node.png",
     width: 75,
     height: 75,
   },
@@ -108,6 +138,24 @@ export const BACKEND_SKILL = [
   {
     skill_name: "Deep Learning",
     image: "dl.svg",
+    width: 75,
+    height: 75,
+  },
+  {
+    skill_name: "TensorFlow",
+    image: "https://skillicons.dev/icons?i=tensorflow",
+    width: 75,
+    height: 75,
+  },
+  {
+    skill_name: "PyTorch",
+    image: "https://skillicons.dev/icons?i=pytorch",
+    width: 75,
+    height: 75,
+  },
+  {
+    skill_name: "OpenCV",
+    image: "https://skillicons.dev/icons?i=opencv",
     width: 75,
     height: 75,
   },
@@ -138,8 +186,26 @@ export const BACKEND_SKILL = [
   {
     skill_name: "MongoDB",
     image: "mongodb.png",
-    width: 40,
-    height: 40,
+    width: 60,
+    height: 60,
+  },
+  {
+    skill_name: "Redis",
+    image: "https://skillicons.dev/icons?i=redis",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "Supabase",
+    image: "https://skillicons.dev/icons?i=supabase",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "Firebase",
+    image: "firebase.png",
+    width: 60,
+    height: 60,
   },
 ] as const;
 
@@ -157,10 +223,46 @@ export const FULLSTACK_SKILL = [
     height: 75,
   },
   {
+    skill_name: "AWS",
+    image: "https://skillicons.dev/icons?i=aws",
+    width: 75,
+    height: 75,
+  },
+  {
+    skill_name: "GCP",
+    image: "https://skillicons.dev/icons?i=gcp",
+    width: 75,
+    height: 75,
+  },
+  {
+    skill_name: "Vercel",
+    image: "https://skillicons.dev/icons?i=vercel",
+    width: 65,
+    height: 65,
+  },
+  {
+    skill_name: "Netlify",
+    image: "https://skillicons.dev/icons?i=netlify",
+    width: 65,
+    height: 65,
+  },
+  {
     skill_name: "Figma",
     image: "figma.png",
-    width: 50,
-    height: 50,
+    width: 55,
+    height: 55,
+  },
+  {
+    skill_name: "Postman",
+    image: "https://skillicons.dev/icons?i=postman",
+    width: 65,
+    height: 65,
+  },
+  {
+    skill_name: "VS Code",
+    image: "https://skillicons.dev/icons?i=vscode",
+    width: 65,
+    height: 65,
   },
 ] as const;
 
@@ -233,6 +335,10 @@ export const FOOTER_DATA = [
 ] as const;
 
 export const NAV_LINKS = [
+  {
+    title: "About Me",
+    link: "#about-me",
+  },
   {
     title: "Services",
     link: "#services",

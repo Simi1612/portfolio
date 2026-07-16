@@ -1,63 +1,164 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const EXPERIENCES = [
+  {
+    company: "Biraj Tech Services",
+    role: "AI/ML Intern",
+    period: "Feb 2026 – Present",
+    location: "Ahmedabad, Gujarat",
+    description: [
+      "Developed FlyFi's Vayu & Seer flight delay forecasting system using machine learning, feature engineering, preprocessing, and model evaluation.",
+      "Built an AI-powered Sales Automation Platform with automated outreach, AI replies, follow-ups, and analytics dashboards.",
+      "Continuously learned and applied LLMs, GenAI, LangChain, LangGraph, AI Agents, and modern AI tools while delivering production-grade solutions.",
+      "Worked on data processing pipelines using historical and live operational data across multiple routes.",
+      "Collaborated on production-ready AI deployments, prompt engineering workflows, and scalable backend services using Python and FastAPI.",
+    ],
+    skills: ["Python", "FastAPI", "Machine Learning", "LangChain", "LangGraph", "GenAI", "Prompt Engineering"],
+  },
+  {
+    company: "Tech Elecon",
+    role: "Data Science Intern",
+    period: "May 2025 – Jun 2025",
+    location: "Anand, Gujarat",
+    description: [
+      "Built machine learning models for stock market trend analysis and price forecasting using historical market data.",
+      "Developed analytical dashboards and visual reports to clearly communicate forecasting insights and model performance.",
+      "Performed data preprocessing, feature selection, and statistical evaluation using Python, Pandas, NumPy, and Scikit-Learn.",
+      "Evaluated predictive algorithms to drive actionable data insights and improve accuracy metrics.",
+    ],
+    skills: ["Python", "Scikit-Learn", "Pandas", "NumPy", "Time-Series Forecasting", "Data Analysis"],
+  },
+  {
+    company: "Mirror Institute",
+    role: "Data Entry & Records Management Associate",
+    period: "Nov 2022 – Dec 2025",
+    location: "Nadiad, Gujarat",
+    description: [
+      "Managed and maintained institutional datasets and academic records alongside undergraduate engineering studies.",
+      "Learned effective time management by organizing, task scheduling, and prioritizing daily responsibilities to meet deadlines efficiently.",
+      "Collaborated across teams, supporting peers and staff to streamline daily operational workflows and record accuracy.",
+      "Contributed to institutional growth through event organization and process improvements.",
+    ],
+    skills: ["Data Management", "Task Scheduling", "Excel / Sheets", "Time Management", "Operations"],
+  },
+];
 
 export const Experience = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
   return (
     <section
       id="experience"
-      className="flex flex-col items-center justify-center py-20 z-20"
+      className="flex flex-col items-center justify-center py-20 z-20 w-full scroll-mt-20"
     >
-      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10">
-        Work Experience
-      </h1>
-      <div className="w-[90%] md:w-[70%] max-w-[1000px] flex flex-col gap-8">
-        {/* Experience Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center bg-[#03001457] border border-[#2A0E61] p-6 rounded-lg backdrop-blur-md">
-          <div>
-            <h2 className="text-2xl font-bold text-white">AI/ML Developer & Consultant</h2>
-            <p className="text-lg text-purple-400 font-semibold mt-1">
-              Biraj Tech Services
-            </p>
-            <p className="text-sm text-gray-400 mt-1">Ahmedabad, Gujarat</p>
-          </div>
-          <div className="mt-4 md:mt-0 bg-[#7042f82c] border border-[#7042f88b] text-[#b49bff] text-xs font-semibold px-4 py-2 rounded-full">
-            February 2026 – Present
-          </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="flex flex-col items-center mb-14"
+      >
+        <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+          Where I&apos;ve Worked
+        </h1>
+        <p className="text-gray-400 mt-3 text-sm max-w-[500px] text-center">
+          My professional journey across AI, Machine Learning, and Data Science
+        </p>
+      </motion.div>
+
+      <div className="w-[90%] max-w-[1050px] flex flex-col md:flex-row gap-8 items-start bg-[#03001457] border border-[#2A0E61] p-6 md:p-8 rounded-2xl backdrop-blur-md">
+        {/* Sidebar Tabs */}
+        <div className="flex md:flex-col flex-row overflow-x-auto md:overflow-visible w-full md:w-[240px] shrink-0 border-b md:border-b-0 md:border-l border-[#2A0E61]/60 md:py-2 gap-1 pb-4 md:pb-0">
+          {EXPERIENCES.map((exp, index) => {
+            const isActive = activeTab === index;
+            return (
+              <button
+                key={exp.company}
+                onClick={() => setActiveTab(index)}
+                className={`relative px-5 py-3.5 text-left transition-all duration-300 whitespace-nowrap md:whitespace-normal rounded-r-lg group flex items-center justify-between ${
+                  isActive
+                    ? "bg-[#7042f820] text-white font-semibold"
+                    : "text-gray-400 hover:text-gray-200 hover:bg-[#7042f80a]"
+                }`}
+              >
+                {/* Active Indicator Bar */}
+                {isActive && (
+                  <motion.div
+                    layoutId="activeIndicator"
+                    className="absolute left-0 bottom-0 md:top-0 w-full md:w-1 h-1 md:h-full bg-gradient-to-b md:from-purple-500 md:to-cyan-500 from-purple-500 to-cyan-500 rounded-full"
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  />
+                )}
+                <span className="text-sm tracking-wide z-10">{exp.company}</span>
+                {isActive && (
+                  <span className="hidden md:inline-block text-purple-400 text-xs ml-2 animate-pulse">
+                    ●
+                  </span>
+                )}
+              </button>
+            );
+          })}
         </div>
 
-        {/* Responsibilities & Achievements */}
-        <div className="bg-[#03001427] border border-[#2A0E61] p-6 rounded-lg backdrop-blur-md">
-          <h3 className="text-xl font-bold text-white mb-4">
-            Consulting Experience & Core Contributions
-          </h3>
-          <ul className="list-disc list-outside text-gray-300 space-y-3 pl-4">
-            <li>
-              <strong>AI & Automation Architect</strong>: Developed end-to-end AI applications, customized automation models, and custom business software integrations.
-            </li>
-            <li>
-              <strong>Predictive Engine Design</strong>: Engineered the core forecasting engine for <strong>FlyFi</strong> (flight delay prediction) using custom feature engineering, model tuning, and cloud API deployment.
-            </li>
-            <li>
-              <strong>Document Intelligence</strong>: Built high-accuracy OCR data extraction pipelines using Gemini Vision and GPT-4o to analyze financial docs, soil reports, and invoices automatically.
-            </li>
-            <li>
-              <strong>Backend AI Systems</strong>: Built robust, scalable backend architectures and API interfaces using Python, Django, and FastAPI.
-            </li>
-            <li>
-              <strong>Intelligent Workflow Automation</strong>: Optimized operational overhead by creating custom n8n orchestrations that integrate LLaMA3, Gmail, Slack, and Notion databases.
-            </li>
-            <li>
-              <strong>Outbound Lead Automation</strong>: Engineered an <strong>AI Sales Agent</strong> automating outbound lead discovery, personalization vectors, email outreach, and response tracking.
-            </li>
-            <li>
-              <strong>AI Agent Curation</strong>: Built <strong>Trendu Daily</strong>, an autonomous market-scraping n8n pipeline summarizing global tech news and startup opportunities via automated HTML mail.
-            </li>
-            <li>
-              <strong>RAG Development</strong>: Designed multi-user chatbot architectures implementing vector databases (FAISS, Supabase pgvector) and RAG using LangChain and LangGraph.
-            </li>
-            <li>
-              <strong>DevOps & Containerization</strong>: Managed production deployments using Docker, version control (Git & GitHub), SQL databases, and secure API auth protocols.
-            </li>
-          </ul>
+        {/* Content Area */}
+        <div className="flex-1 min-h-[380px] w-full pt-2 md:pt-0 md:pl-6">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, x: 15 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -15 }}
+              transition={{ duration: 0.25 }}
+              className="flex flex-col gap-5"
+            >
+              {/* Header: Role & Period */}
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-[#2A0E61]/60">
+                <div>
+                  <h2 className="text-2xl font-bold text-white tracking-wide">
+                    {EXPERIENCES[activeTab].role}{" "}
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
+                      @ {EXPERIENCES[activeTab].company}
+                    </span>
+                  </h2>
+                  <p className="text-gray-400 text-sm mt-1 flex items-center gap-1.5">
+                    <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    {EXPERIENCES[activeTab].location}
+                  </p>
+                </div>
+                <div className="w-fit px-4 py-1.5 rounded-full bg-[#7042f82c] border border-[#7042f88b] text-[#b49bff] text-xs font-semibold">
+                  {EXPERIENCES[activeTab].period}
+                </div>
+              </div>
+
+              {/* Responsibilities List */}
+              <ul className="space-y-3 mt-1">
+                {EXPERIENCES[activeTab].description.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-gray-300 text-sm leading-relaxed">
+                    <span className="text-purple-400 shrink-0 mt-1">▹</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Skills Tags */}
+              <div className="mt-6 pt-4 border-t border-[#2A0E61]/40 flex flex-wrap gap-2">
+                {EXPERIENCES[activeTab].skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="text-xs px-3 py-1 rounded-full bg-[#7042f815] border border-[#7042f835] text-cyan-300/90 font-medium"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </section>
