@@ -15,7 +15,7 @@ export const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
+      className="flex flex-col-reverse lg:flex-row items-center justify-center px-4 sm:px-10 md:px-20 mt-28 sm:mt-32 md:mt-40 gap-10 lg:gap-0 w-full z-[20]"
     >
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div
@@ -28,7 +28,7 @@ export const HeroContent = () => {
 
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 mt-6 text-5xl md:text-6xl font-bold text-white max-w-[650px] w-auto h-auto leading-tight"
+          className="flex flex-col gap-4 sm:gap-6 mt-4 sm:mt-6 text-3xl sm:text-5xl md:text-6xl font-bold text-white max-w-[650px] w-full leading-tight"
         >
           <span>
             Building{" "}
@@ -41,7 +41,7 @@ export const HeroContent = () => {
 
         <motion.p
           variants={slideInFromLeft(0.8)}
-          className="text-lg text-gray-400 my-5 max-w-[600px]"
+          className="text-base sm:text-lg text-gray-400 my-3 sm:my-5 max-w-[600px] leading-relaxed"
         >
           I help startups and businesses automate workflows, process documents with AI, and build production-ready LLM applications using Python, FastAPI, n8n, and modern web technologies.
         </motion.p>
@@ -50,14 +50,14 @@ export const HeroContent = () => {
           <motion.a
             href="#projects"
             variants={slideInFromLeft(1)}
-            className="py-2.5 px-6 button-primary text-center text-white cursor-pointer rounded-lg font-medium transition-all hover:scale-105 active:scale-95 select-none"
+            className="py-2.5 px-6 button-primary text-center text-white cursor-pointer rounded-lg font-medium transition-all hover:scale-105 active:scale-95 select-none text-sm sm:text-base"
           >
             View My Work
           </motion.a>
           
           <a
             href="#contact"
-            className="py-2.5 px-6 border border-[#7042f88b] bg-[#03001457] text-center text-[#b49bff] hover:text-white hover:bg-purple-600/30 cursor-pointer rounded-lg font-medium transition-all hover:scale-105 active:scale-95 backdrop-blur-sm z-20 select-none"
+            className="py-2.5 px-6 border border-[#7042f88b] bg-[#03001457] text-center text-[#b49bff] hover:text-white hover:bg-purple-600/30 cursor-pointer rounded-lg font-medium transition-all hover:scale-105 active:scale-95 backdrop-blur-sm z-20 select-none text-sm sm:text-base"
           >
             Start Your Project
           </a>
@@ -66,7 +66,7 @@ export const HeroContent = () => {
 
       <motion.div
         variants={slideInFromRight(0.8)}
-        className="w-full h-full flex justify-center items-center"
+        className="w-full h-full flex justify-center items-center mt-4 lg:mt-0"
       >
         <Image
           src="/hero-bg.svg"
@@ -74,7 +74,7 @@ export const HeroContent = () => {
           height={650}
           width={650}
           draggable={false}
-          className="select-none"
+          className="select-none max-w-[260px] sm:max-w-[400px] md:max-w-[550px] lg:max-w-[650px] w-full h-auto object-contain"
         />
       </motion.div>
     </motion.div>

@@ -40,25 +40,25 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center justify-center py-20 z-[20] w-full"
+      className="flex flex-col items-center justify-center py-16 md:py-20 px-4 sm:px-6 z-[20] w-full scroll-mt-20"
     >
-      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10 text-center">
+      <h1 className="text-[30px] sm:text-[36px] md:text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 pb-6 md:pb-10 text-center leading-snug">
         Let’s Build Something Intelligent
       </h1>
 
-      <p className="text-gray-400 text-center max-w-[700px] px-6 mb-12 text-base leading-relaxed">
+      <p className="text-gray-400 text-center max-w-[700px] px-2 sm:px-6 mb-10 md:mb-12 text-sm sm:text-base leading-relaxed">
         I’m currently available for freelance AI development, workflow automation, and custom software projects. 
         Whether you need an AI agent, an LLM-powered application, document intelligence, or business automation with n8n, 
         I’d love to help bring your ideas to life.
       </p>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-[1000px] w-full px-6 items-stretch">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 max-w-[1000px] w-full items-stretch">
         
         {/* Contact Form */}
-        <div className="flex flex-col p-8 rounded-2xl border border-[#2A0E61] bg-[#03001427] backdrop-blur-md justify-between">
+        <div className="flex flex-col p-5 sm:p-8 rounded-2xl border border-[#2A0E61] bg-[#03001427] backdrop-blur-md justify-between">
           <div className="flex items-center gap-3 mb-6">
-            <EnvelopeIcon className="w-6 h-6 text-purple-400" />
-            <h2 className="text-xl font-bold text-white">Send Me a Message</h2>
+            <EnvelopeIcon className="w-6 h-6 text-purple-400 shrink-0" />
+            <h2 className="text-lg sm:text-xl font-bold text-white">Send Me a Message</h2>
           </div>
 
           {status === "success" ? (
@@ -148,11 +148,11 @@ export const Contact = () => {
         </div>
 
         {/* Discovery Call Booking */}
-        <div className="flex flex-col p-8 rounded-2xl border border-[#2A0E61] bg-[#03001427] backdrop-blur-md justify-between">
+        <div className="flex flex-col p-5 sm:p-8 rounded-2xl border border-[#2A0E61] bg-[#03001427] backdrop-blur-md justify-between">
           <div className="flex flex-col">
             <div className="flex items-center gap-3 mb-6">
-              <CalendarIcon className="w-6 h-6 text-cyan-400" />
-              <h2 className="text-xl font-bold text-white">Book a Discovery Call</h2>
+              <CalendarIcon className="w-6 h-6 text-cyan-400 shrink-0" />
+              <h2 className="text-lg sm:text-xl font-bold text-white">Book a Discovery Call</h2>
             </div>
             
             <p className="text-gray-300 text-sm leading-relaxed mb-6">

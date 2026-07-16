@@ -92,7 +92,7 @@ export const Services = () => {
   return (
     <section
       id="services"
-      className="flex flex-col items-center justify-center py-20 z-[20] w-full scroll-mt-20"
+      className="flex flex-col items-center justify-center py-16 md:py-20 px-4 sm:px-6 z-[20] w-full scroll-mt-20"
     >
       {/* Heading */}
       <motion.div
@@ -100,18 +100,18 @@ export const Services = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="flex flex-col items-center mb-14"
+        className="flex flex-col items-center mb-10 sm:mb-14 text-center"
       >
-        <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+        <h1 className="text-[32px] sm:text-[38px] md:text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
           My Freelance Services
         </h1>
-        <p className="text-gray-400 mt-3 text-sm max-w-[500px] text-center">
+        <p className="text-gray-400 mt-3 text-xs sm:text-sm max-w-[500px] text-center px-2">
           End-to-end AI development — from idea to production-ready deployment
         </p>
       </motion.div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-[1100px] w-full px-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 max-w-[1100px] w-full">
         {SERVICES.map((service, i) => {
           const Icon = service.icon;
           return (
