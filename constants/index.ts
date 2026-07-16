@@ -264,6 +264,18 @@ export const FULLSTACK_SKILL = [
     width: 65,
     height: 65,
   },
+  {
+    skill_name: "Linux",
+    image: "https://skillicons.dev/icons?i=linux",
+    width: 65,
+    height: 65,
+  },
+  {
+    skill_name: "Power BI",
+    image: "https://skillicons.dev/icons?i=powerbi",
+    width: 65,
+    height: 65,
+  },
 ] as const;
 
 export const PROJECTS = [

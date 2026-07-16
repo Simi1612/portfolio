@@ -29,6 +29,7 @@ export const Encryption = () => {
             width={50}
             height={50}
             className="translate-y-5 transition-all duration-200 group-hover:translate-y-11"
+            style={{ width: "auto", height: "auto" }}
           />
           <Image
             src="/lock-main.png"
@@ -36,6 +37,7 @@ export const Encryption = () => {
             width={70}
             height={70}
             className="z-10"
+            style={{ width: "auto", height: "auto" }}
           />
         </div>
 

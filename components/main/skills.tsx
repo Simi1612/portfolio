@@ -17,7 +17,7 @@ export const Skills = () => {
     >
       <SkillText />
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+      <div className="flex flex-row justify-center md:justify-around flex-wrap mt-4 gap-3 sm:gap-5 items-center w-full px-2 sm:px-10">
         {SKILL_DATA.map((skill, i) => (
           <SkillDataProvider
             key={skill.skill_name}
@@ -30,7 +30,7 @@ export const Skills = () => {
         ))}
       </div>
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+      <div className="flex flex-row justify-center md:justify-around flex-wrap mt-4 gap-3 sm:gap-5 items-center w-full px-2 sm:px-10">
         {FRONTEND_SKILL.map((skill, i) => (
           <SkillDataProvider
             key={skill.skill_name}
@@ -42,7 +42,7 @@ export const Skills = () => {
           />
         ))}
       </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+      <div className="flex flex-row justify-center md:justify-around flex-wrap mt-4 gap-3 sm:gap-5 items-center w-full px-2 sm:px-10">
         {BACKEND_SKILL.map((skill, i) => (
           <SkillDataProvider
             key={skill.skill_name}
@@ -54,7 +54,7 @@ export const Skills = () => {
           />
         ))}
       </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+      <div className="flex flex-row justify-center md:justify-around flex-wrap mt-4 gap-3 sm:gap-5 items-center w-full px-2 sm:px-10">
         {FULLSTACK_SKILL.map((skill, i) => (
           <SkillDataProvider
             key={skill.skill_name}
