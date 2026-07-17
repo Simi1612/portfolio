@@ -38,7 +38,6 @@ export const SkillDataProvider = ({
       animate={inView ? "visible" : "hidden"}
       custom={index}
       transition={{ delay: index * animationDelay }}
-      className="scale-[0.82] md:scale-100 origin-center -m-1.5 md:m-0"
     >
       <Image
         src={src.startsWith("http") ? src : `/skills/${src}`}
